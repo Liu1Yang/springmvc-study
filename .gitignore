@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IDEA 配置文件
 .idea/
 *.iml
@@ -13,3 +14,15 @@ Thumbs.db
 
 # Maven本地包装文件夹
 .mvn/wrapper/maven-wrapper.jar
+=======
+# IDEA配置
+.idea/
+*.iml
+
+# Maven编译输出
+target/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+>>>>>>> 834857dcaf4e5a9266d68f79ccb906bbe6629e13
