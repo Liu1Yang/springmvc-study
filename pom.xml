@@ -15,11 +15,12 @@
     <!-- 在这里填入所有子模块文件夹名，后续新增模块继续往下加 -->
     <modules>
         <module>springmvc_01_quickstart</module>
-<!--        <module>springmvc_02_bean_load</module>-->
+        <module>springmvc_06_rest</module>
+        <!--        <module>springmvc_02_bean_load</module>-->
 <!--        <module>springmvc_03_request_mapping</module>-->
 <!--        <module>springmvc_04_request_param</module>-->
 <!--        <module>springmvc_05_response</module>-->
-<!--        <module>springmvc_06_rest</module>-->
+        <module>springmvc_06_rest</module>
 <!--        <module>springmvc_07_rest_case</module>-->
 <!--        <module>springmvc_08_ssm</module>-->
 <!--        <module>springmvc_09_result</module>-->
