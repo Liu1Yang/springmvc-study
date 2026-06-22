@@ -2,10 +2,7 @@ package com.itheima.controller;
 
 import com.itheima.domain.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
@@ -27,7 +24,7 @@ public class UserController {
 
     @RequestMapping(value = "/users",method = RequestMethod.PUT)
     @ResponseBody
-    public String update(User user){
+    public String update(@RequestBody User user){
         System.out.println("user update..."+user);
         return "{'module':'user update'}";
     }
