@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- 继承外层父工程 springmvc_parent -->
+  <parent>
+    <groupId>com.itheima</groupId>
+    <artifactId>springmvc_parent</artifactId>
+    <version>1.0</version>
+    <!-- 相对路径：子模块文件夹在父pom同级目录，写../pom.xml -->
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <!-- 仅保留子模块唯一标识，groupId、version自动继承父工程 -->
+  <artifactId>springmvc_07_rest_case</artifactId>
+  <packaging>war</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- 版本由父dependencyManagement统一管理，删除version标签 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    <!-- jackson版本跟随父工程2.13.3，无需指定version -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <!-- version继承父pluginManagement，直接删除 -->
+        <configuration>
+          <port>80</port>
+          <path>/</path>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

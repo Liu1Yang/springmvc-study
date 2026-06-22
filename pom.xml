@@ -21,7 +21,7 @@
 <!--        <module>springmvc_04_request_param</module>-->
 <!--        <module>springmvc_05_response</module>-->
         <module>springmvc_06_rest</module>
-<!--        <module>springmvc_07_rest_case</module>-->
+        <module>springmvc_07_rest_case</module>
 <!--        <module>springmvc_08_ssm</module>-->
 <!--        <module>springmvc_09_result</module>-->
 <!--        <module>springmvc_10_exception</module>-->
