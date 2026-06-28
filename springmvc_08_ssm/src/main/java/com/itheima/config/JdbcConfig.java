@@ -3,6 +3,8 @@ package com.itheima.config;
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -26,4 +28,12 @@ public class JdbcConfig {  // 数据源配置
         dataSource.setPassword(password);
         return dataSource;  //创建并返回一个 Druid 数据源 的 Bean，供 MyBatisConfig 使用。
     }
+
+    @Bean
+    public PlatformTransactionManager transactionManager(DataSource dataSource){
+        DataSourceTransactionManager ds= new DataSourceTransactionManager();
+        ds.setDataSource(dataSource);
+        return ds;
+    }
+
 }

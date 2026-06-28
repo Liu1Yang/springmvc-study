@@ -1,9 +1,11 @@
 package com.itheima.service;
 
 import com.itheima.domain.Book;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Transactional
 public interface BookService { // 提供业务层接口
 
     /**
